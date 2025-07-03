@@ -1,63 +1,39 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seoul Arena</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden; /* 스크롤바 제거 */
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEOULARENA</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
-        .background-container {
-            width: 100%;
-            height: 100%;
-            background-color: #0D0D0D; /* 기본 배경색 */
-            background-image: url('arena.jpg'); /* 여기에 정방형 이미지 경로를 넣어주세요 */
-            background-repeat: no-repeat;
-            background-position: center center; /* 이미지를 중앙에 배치 */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* 기본적으로 cover로 설정하여 컨테이너를 채우되, 아래 미디어 쿼리로 조절 */
-            background-size: cover;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* 태블릿 이상 (높이에 꽉 차게) */
-        @media (min-width: 768px) {
-            .background-container {
-                background-size: auto 100%; /* 높이에 꽉 차게 */
-            }
-        }
+    body {
+      height: 100vh;
+      width: 100vw;
+      background-color: #0D0D0D;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+    }
 
-        /* 모바일 (폭이 꽉 차게) */
-        @media (max-width: 767px) {
-            .background-container {
-                background-size: 100% auto; /* 폭이 꽉 차게 */
-            }
-        }
-
-        .center-text {
-            font-family: 'Montserrat', sans-serif; /* 웹폰트 적용 */
-            color: white; /* 텍스트 색상 */
-            font-weight: 700; /* Montserrat Bold */
-            font-size: 20px; /* 글자 크기 (원하는 대로 조절) */
-            letter-spacing: 30px; /* 자간 (원하는 대로 조절) */
-            text-align: center;
-            text-transform: uppercase; /* 대문자로 표시 (옵션) */
-        }
-    </style>
+    .text {
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <div class="background-container">
-        <div class="center-text">
-            SEOULARENA
-        </div>
-    </div>
+  <div class="text">Get ready to go live</div>
 </body>
 </html>
