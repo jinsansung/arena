@@ -30,10 +30,26 @@
       letter-spacing: 0.3em;
       text-transform: uppercase;
       text-align: center;
+      transition: opacity 0.3s ease;
     }
   </style>
 </head>
 <body>
-  <div class="text">Going live soon</div>
+  <div class="text" id="rotatingText">GOING LIVE SOON</div>
+
+  <script>
+    const texts = ["GOING LIVE SOON", "2027", "SEOULARENA"];
+    let index = 0;
+    const textEl = document.getElementById("rotatingText");
+
+    setInterval(() => {
+      index = (index + 1) % texts.length;
+      textEl.style.opacity = 0;
+      setTimeout(() => {
+        textEl.textContent = texts[index];
+        textEl.style.opacity = 1;
+      }, 300);
+    }, 2000);
+  </script>
 </body>
 </html>
